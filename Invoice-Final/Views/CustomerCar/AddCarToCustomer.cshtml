@@ -1,0 +1,22 @@
+﻿@model Invoice_Final.Models.Dto.AddCarToCustomerDto
+
+<form asp-controller="CustomerCar" asp-action="AddCarToCustomer" method="post">
+    <input asp-for="CustomerId" type="hidden" />
+    <div class="form-group">
+        <label asp-for="CarRego"></label>
+        <input asp-for="CarRego" />
+        <span asp-validation-for="CarRego"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CarMake"></label>
+        <input asp-for="CarMake" />
+        <span asp-validation-for="CarMake"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CarModel"></label>
+        <input asp-for="CarModel" />
+        <span asp-validation-for="CarModel"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <a asp-controller="CustomerCar" asp-action="GetCustomerCars" class="btn btn-secondary">Go Back</a>
+</form>
